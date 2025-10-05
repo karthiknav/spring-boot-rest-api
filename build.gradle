@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'org.springframework.boot' version '2.5.0'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
 	id 'idea'
@@ -8,7 +8,14 @@ plugins {
 
 group = 'com.ev'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+
+defaultTasks 'build'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
 
 repositories {
 	mavenCentral()
@@ -27,5 +34,5 @@ test {
 }
 
 application {
-	mainClassName = 'com.ev.EvApplication'
+	mainClass = 'com.ev.EvApplication'
 }

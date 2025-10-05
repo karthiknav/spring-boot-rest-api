@@ -9,3 +9,8 @@ build
 spring-boot-rest-api.iml
 spring-boot-rest-api.ipr
 spring-boot-rest-api.iws
+caches
+.tmp
+wrapper
+daemon
+native
